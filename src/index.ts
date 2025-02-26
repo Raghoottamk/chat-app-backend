@@ -42,7 +42,7 @@ app.get("/", (req: Request, res: Response) => {
 // * Add Kafka Producer
 connectKafkaProducer().catch((err) => console.log("Kafka Consumer error", err));
 
-consumeMessages(process.env.KAFKA_TOPIC!).catch((err) =>
+consumeMessages(process.env.KAFKA_TOPIC).catch((err) =>
   console.log("The Kafka Consume error", err)
 );
 
